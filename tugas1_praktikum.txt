@@ -1,0 +1,19 @@
+1. Jelaskan apa yang dimaksud dengan dokumen root ?
+    Jawaban : 
+
+2. Pada apache web server, apakah dokumen root harus terletak dalam direktori
+   C:\xampp\htdocs ? Jelaskan jawaban anda!
+    Jawaban :
+
+3. Jelaskan apa yang dimaksud dengan perintah git : init, clone, remote, add, commit, push
+   dan checkout!
+    Jawaban :
+
+4. Jelaskan perbedaan antara GitHub dan GitLab!
+    Jawaban :
+
+5. Apa bedanya variable user dengan variable system ?
+    Jawaban :
+
+6. Apa persamaan variable system dengan variable constant ?
+    Jawaban :  
