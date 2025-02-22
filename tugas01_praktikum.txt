@@ -1,0 +1,51 @@
+nama    : Alya Az-Zahra
+NIM     : 0110124123
+Rombel  : SI06
+
+1. Jelaskan apa yang dimaksud dengan dokumen root?
+    Jawaban: Dokumen root adalah dokumen yang berada di tingkat atas dalam struktur dokumen.
+             Root dokumen adalah folder tempat file situs web untuk nama domain disimpan. 
+             Karena cPanel memungkinkan beberapa nama domain (domain tambahan dan subdomain), 
+             perlu memiliki folder unik untuk setiap domain.
+
+2. Pada apache web server, apakah dokumen root harus terletak dalam direktori C:\xampp\htdocs? Jelaskan jawaban anda!
+    Jawaban: Tidak, dokumen root tidak harus terletak dalam direktori C:\xampp\htdocs. 
+             Dokumen root dapat berada di mana saja, tetapi biasanya terletak di direktori yang
+             ditentukan oleh konfigurasi Apache. Pada XAMPP, dokumen root biasnya terletak di 
+             direktori C:\xampp\htdocs, tetapi dapat diubah melalui konfigurasi Apache.
+             Folder htdocs sendiri adalah default root directory atau home directory pada xampp. 
+             Seluruh data website php atau html (kecuali database) harus ditempatkan di dalam folder ini, agar website bisa diakses.
+
+3. Jelaskan apa yang dimaksud dengan perintah git : init, clone, remote, add, commit, push dan checkout!
+    Jawaban: Berikut merupakan penjelasan tentang perintah-perintah Git:
+             - git init: Digunakan untuk membuat repositori baru di direktori yang sedang digunakan
+             - git clone: Digunakan untuk mengkloning repositori dari server Git ke lokal
+             - git remote: Digunakan untuk mengatur alamat server Git yang akan digunakan untuk push
+             - git add: Digunakan untuk menambahkan file atau perubahan ke staging area
+             - git commit: Digunakan untuk menyimpan perubahan-perubahan yang telah ditambahkan ke staging area ke dalam repositori
+             - git push: Digunakan untuk mengirimkan perubahan-perubahan ke server Git
+             - git checkout: Digunakan untuk beralih ke branch yang berbeda atau mengembalikan file ke versi sebelumnya
+
+4. Jelaskan perbedaan antara GitHub dan GitLab!
+    Jawaban: Berikut adalah perbedaan antara GitHub dan GitLab:
+             (a) - GitHub adalah layanan hosting Git yang populer dan banyak digunakan, sedangkan 
+                 - GitLab adalah layanan hosting Git yang juga populer dan banyak digunakan, tetapi memiliki fitur-fitur yang lebih lengkap dan fleksibel.
+             (b) - GitHub memiliki fitur-fitur yang lebih sederhana dan mudah digunakan, sedangkan
+                 - GitLab memiliki fitur-fitur yang lebih kompleks dan dapat disesuaikan dengan kebutuhan pengguna.
+             (c) - GitHub memiliki integrasi yang lebih baik dengan perangkat lunak lainnya, sedangkan
+                 - GitLab memiliki integrasi yang lebih baik dengan perangkat lunak lainnya, tetapi juga mempunyai fitur-fitur yang lebih lengkap dan fleksibel.
+
+5. Apa bedanya variable user dengan variable system?
+    Jawaban: Variable user dan variable system adalah dua jenis variabel yang berbeda dalam sistem operasi. 
+             - Variable user adalah variabel yang digunakan oleh pengguna untuk menyimpan data pribadi, seperti nama pengguna, kata sandi, dan lain-lain. 
+               Variable user biasnya disimpan dalam direktori user, contoh variable user adalah $HOME, $USER, $LOGNAME, dan lain-lain
+             - Variable system adalah variabel yang digunakan oleh sistem operasi untuk menyimpan data sistem, seperti konfigurasi sistem, pengaturan keamanan, dan lain-lain. 
+               Variable system biasanya disimpan dalam direktori sistem, contoh variable system adalah $PATH, $LD_LIBRARY_PATH, $JAVA_HOME, dan lain-lainnya.
+
+6. Apa persamaan variable system dengan variable constant?
+    Jawaban: - Variable system dan variable constant adalah dua konsep yang berbeda dalam sistem operasi.
+               Variable system adalah variabel yang digunakan oleh sistem operasi untuk menyimpan data sistem, seperti konfigurasi sistem, pengaturan keamanan, dan lain-lain.
+             - Variable constant adalah variabel yang memiliki nilai yang tidak dapat diubah, seperti nilai PI, nilai E, dan lainnya
+               Variable constant biasanya digunakan dalam program untuk menyimpan nilai yang tidak dapat diubah, seperti nilai
+             - Persamaan antara variable system dan variable constant adalah bahwa keduanya memiliki nilai yang tidak dapat diubah, 
+               tetapi variable system digunakan untuk menyimpan data sistem, sedangkan variable constant digunakan untuk menyimpan nilai yang tidak dapat diubah dalam program.
