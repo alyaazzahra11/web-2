@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 13, 2025 at 06:02 AM
--- Server version: 8.4.3
--- PHP Version: 8.3.16
+-- Waktu pembuatan: 25 Bulan Mei 2025 pada 10.43
+-- Versi server: 8.4.3
+-- Versi PHP: 8.3.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bidang_ilmu`
+-- Struktur dari tabel `bidang_ilmu`
 --
 
 CREATE TABLE `bidang_ilmu` (
@@ -34,18 +34,20 @@ CREATE TABLE `bidang_ilmu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `bidang_ilmu`
+-- Dumping data untuk tabel `bidang_ilmu`
 --
 
 INSERT INTO `bidang_ilmu` (`id`, `nama`, `deskripsi`) VALUES
-(1, 'Kecerdasan Buatan', 'Penelitian bidang AI'),
-(2, 'Sistem Informasi', 'Penelitian SI'),
-(3, 'Data Science', 'Penelitian Data');
+(5, 'Basis Data', 'Pada mata kuliah ini belajar mengenai pengellolaan data'),
+(6, 'Statistika dan Probabilitas', 'Pada mata kuliah ini belajar cara pengambilan data yang baik'),
+(7, 'Komunikasi Efektif', 'Pada mata kuliah ini kita belajar cara komunikasi yang baik dan efektif secara interpersonal'),
+(8, 'Jaringan Komputer', 'Pada mata kuliah ini kita belajar mengenai jaringan'),
+(9, 'Pemprograman Web', 'kita belajar mengenai PHP');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dosen`
+-- Struktur dari tabel `dosen`
 --
 
 CREATE TABLE `dosen` (
@@ -64,18 +66,18 @@ CREATE TABLE `dosen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `dosen`
+-- Dumping data untuk tabel `dosen`
 --
 
 INSERT INTO `dosen` (`id`, `nidn`, `nama`, `gelar_belakang`, `gelar_depan`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `email`, `tahun_masuk`, `prodi_id`) VALUES
-(1, '0012345678', 'Budi Santoso', 'M.Kom', 'Dr.', 'L', 'Bandung', '1980-03-12', 'Jl. Cendana 1', 'budi@univ.ac.id', 2005, 1),
-(2, '0012345679', 'Siti Aminah', 'M.T', 'Dr.', 'P', 'Jakarta', '1982-05-22', 'Jl. Kenanga 2', 'siti@univ.ac.id', 2007, 2),
-(3, '0012345680', 'Dewi Lestari', 'Ph.D', 'Prof.', 'P', 'Surabaya', '1978-01-10', 'Jl. Melati 5', 'dewi@univ.ac.id', 2003, 1);
+(7, '111', 'Alya', 'S.Kom', 'Dr', 'P', 'Bogor', '2025-05-13', 'Bogor', 'alya@gmail.com', 2024, 7),
+(9, '333', 'Haru', 'S.Kom', '', 'L', 'Bogor', '2004-04-04', 'Bogor', 'haru@gmail.com', 2023, 7),
+(10, '444', 'Jihoon', 'S.Kom', '', 'L', 'Soul', '2000-01-05', 'Bogor', 'paji@gmail.com', 2022, 7);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dosen_kegiatan`
+-- Struktur dari tabel `dosen_kegiatan`
 --
 
 CREATE TABLE `dosen_kegiatan` (
@@ -84,19 +86,17 @@ CREATE TABLE `dosen_kegiatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `dosen_kegiatan`
+-- Dumping data untuk tabel `dosen_kegiatan`
 --
 
 INSERT INTO `dosen_kegiatan` (`dosen_id`, `kegiatan_id`) VALUES
-(1, 1),
-(1, 2),
-(2, 2),
-(3, 3);
+(10, 4),
+(9, 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jenis_kegiatan`
+-- Struktur dari tabel `jenis_kegiatan`
 --
 
 CREATE TABLE `jenis_kegiatan` (
@@ -105,19 +105,19 @@ CREATE TABLE `jenis_kegiatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `jenis_kegiatan`
+-- Dumping data untuk tabel `jenis_kegiatan`
 --
 
 INSERT INTO `jenis_kegiatan` (`id`, `nama`) VALUES
-(1, 'Seminar Nasional'),
+(1, 'Seminar'),
 (2, 'Workshop'),
 (3, 'Pelatihan'),
-(4, 'Kuliah Tamu');
+(6, 'Pengabdian masyarakat');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kegiatan`
+-- Struktur dari tabel `kegiatan`
 --
 
 CREATE TABLE `kegiatan` (
@@ -130,18 +130,18 @@ CREATE TABLE `kegiatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `kegiatan`
+-- Dumping data untuk tabel `kegiatan`
 --
 
 INSERT INTO `kegiatan` (`id`, `tanggal_mulai`, `tanggal_selesai`, `tempat`, `deskripsi`, `jenis_kegiatan_id`) VALUES
-(1, '2023-01-10', '2023-01-11', 'Hotel Grand', 'Seminar AI Nasional', 1),
-(2, '2023-02-05', '2023-02-07', 'Aula Kampus', 'Pelatihan Data Science', 3),
-(3, '2023-03-15', '2023-03-15', 'Gedung Rektorat', 'Kuliah Tamu Prof. Tanaka', 4);
+(4, '2025-05-13', '2025-05-13', 'bogor', 'Seminar mengenai IoT', 1),
+(5, '2025-05-01', '2025-05-03', 'Jakarta', 'Workshop mengenai figma', 2),
+(6, '2025-01-05', '2025-01-11', 'Depok', 'Pengabdian masyarakat pada warga', 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penelitian`
+-- Struktur dari tabel `penelitian`
 --
 
 CREATE TABLE `penelitian` (
@@ -154,18 +154,20 @@ CREATE TABLE `penelitian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `penelitian`
+-- Dumping data untuk tabel `penelitian`
 --
 
 INSERT INTO `penelitian` (`id`, `judul`, `mulai`, `akhir`, `tahun_ajaran`, `bidang_ilmu_id`) VALUES
-(1, 'Penerapan AI untuk Prediksi Cuaca', '2023-01-01', '2023-12-31', '2022/2023', 1),
-(2, 'Sistem Informasi Akademik Berbasis Web', '2022-05-01', '2022-12-01', '2021/2022', 2),
-(3, 'Analisis Big Data di Sektor Kesehatan', '2023-06-01', '2024-06-01', '2023/2024', 3);
+(6, 'Analisis efektivitas pembelajaran daring pada mahasiswa menggunakan metode regresi', '2025-05-01', '2025-05-08', '2024', 6),
+(7, 'Analisis performa protokol routing dalam jaringan komputer berbasis IoT', '2024-12-27', '2025-01-07', '2024', 8),
+(8, 'Pengaruh media sosial terhadap pola komunikasi remaja di era digital', '2024-08-14', '2024-08-24', '2024', 7),
+(9, 'Optimalisasi query SQL pada basis data relasional', '2024-04-06', '2024-04-14', '2024', 5),
+(10, 'Analisis tampilan antarmuka dengan backend', '2025-05-14', '2025-05-14', '2024', 9);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prodi`
+-- Struktur dari tabel `prodi`
 --
 
 CREATE TABLE `prodi` (
@@ -178,17 +180,17 @@ CREATE TABLE `prodi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `prodi`
+-- Dumping data untuk tabel `prodi`
 --
 
 INSERT INTO `prodi` (`id`, `kode`, `nama`, `alamat`, `telpon`, `ketua`) VALUES
-(1, 'TI', 'Teknik Informatika', 'Jl. Merdeka 10', '08123456789', 'Dr. Andi'),
-(2, 'SI', 'Sistem Informasi', 'Jl. Proklamasi 21', '08123456780', 'Dr. Siti');
+(7, 'SI001', 'Sistem Informasi', 'Depok', '+62812345', 'yaa'),
+(8, 'TI001', 'Teknik Informatika', 'Depok', '+62809876', 'taa');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tim_penelitian`
+-- Struktur dari tabel `tim_penelitian`
 --
 
 CREATE TABLE `tim_penelitian` (
@@ -198,28 +200,26 @@ CREATE TABLE `tim_penelitian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `tim_penelitian`
+-- Dumping data untuk tabel `tim_penelitian`
 --
 
 INSERT INTO `tim_penelitian` (`dosen_id`, `penelitian_id`, `peran`) VALUES
-(1, 1, 'Ketua'),
-(1, 3, 'Anggota'),
-(2, 1, 'Anggota'),
-(2, 2, 'Ketua'),
-(3, 3, 'Ketua');
+(7, 8, 'Ketua'),
+(9, 8, 'Anggota'),
+(10, 9, 'Anggota');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bidang_ilmu`
+-- Indeks untuk tabel `bidang_ilmu`
 --
 ALTER TABLE `bidang_ilmu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `dosen`
+-- Indeks untuk tabel `dosen`
 --
 ALTER TABLE `dosen`
   ADD PRIMARY KEY (`id`),
@@ -227,116 +227,116 @@ ALTER TABLE `dosen`
   ADD KEY `prodi_id` (`prodi_id`);
 
 --
--- Indexes for table `dosen_kegiatan`
+-- Indeks untuk tabel `dosen_kegiatan`
 --
 ALTER TABLE `dosen_kegiatan`
   ADD PRIMARY KEY (`dosen_id`,`kegiatan_id`),
   ADD KEY `kegiatan_id` (`kegiatan_id`);
 
 --
--- Indexes for table `jenis_kegiatan`
+-- Indeks untuk tabel `jenis_kegiatan`
 --
 ALTER TABLE `jenis_kegiatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kegiatan`
+-- Indeks untuk tabel `kegiatan`
 --
 ALTER TABLE `kegiatan`
   ADD PRIMARY KEY (`id`),
   ADD KEY `jenis_kegiatan_id` (`jenis_kegiatan_id`);
 
 --
--- Indexes for table `penelitian`
+-- Indeks untuk tabel `penelitian`
 --
 ALTER TABLE `penelitian`
   ADD PRIMARY KEY (`id`),
   ADD KEY `bidang_ilmu_id` (`bidang_ilmu_id`);
 
 --
--- Indexes for table `prodi`
+-- Indeks untuk tabel `prodi`
 --
 ALTER TABLE `prodi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tim_penelitian`
+-- Indeks untuk tabel `tim_penelitian`
 --
 ALTER TABLE `tim_penelitian`
   ADD PRIMARY KEY (`dosen_id`,`penelitian_id`),
   ADD KEY `penelitian_id` (`penelitian_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `bidang_ilmu`
+-- AUTO_INCREMENT untuk tabel `bidang_ilmu`
 --
 ALTER TABLE `bidang_ilmu`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `dosen`
+-- AUTO_INCREMENT untuk tabel `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `jenis_kegiatan`
+-- AUTO_INCREMENT untuk tabel `jenis_kegiatan`
 --
 ALTER TABLE `jenis_kegiatan`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `kegiatan`
+-- AUTO_INCREMENT untuk tabel `kegiatan`
 --
 ALTER TABLE `kegiatan`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `penelitian`
+-- AUTO_INCREMENT untuk tabel `penelitian`
 --
 ALTER TABLE `penelitian`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `prodi`
+-- AUTO_INCREMENT untuk tabel `prodi`
 --
 ALTER TABLE `prodi`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `dosen`
+-- Ketidakleluasaan untuk tabel `dosen`
 --
 ALTER TABLE `dosen`
   ADD CONSTRAINT `dosen_ibfk_1` FOREIGN KEY (`prodi_id`) REFERENCES `prodi` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `dosen_kegiatan`
+-- Ketidakleluasaan untuk tabel `dosen_kegiatan`
 --
 ALTER TABLE `dosen_kegiatan`
   ADD CONSTRAINT `dosen_kegiatan_ibfk_1` FOREIGN KEY (`dosen_id`) REFERENCES `dosen` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `dosen_kegiatan_ibfk_2` FOREIGN KEY (`kegiatan_id`) REFERENCES `kegiatan` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `kegiatan`
+-- Ketidakleluasaan untuk tabel `kegiatan`
 --
 ALTER TABLE `kegiatan`
   ADD CONSTRAINT `kegiatan_ibfk_1` FOREIGN KEY (`jenis_kegiatan_id`) REFERENCES `jenis_kegiatan` (`id`);
 
 --
--- Constraints for table `penelitian`
+-- Ketidakleluasaan untuk tabel `penelitian`
 --
 ALTER TABLE `penelitian`
   ADD CONSTRAINT `penelitian_ibfk_1` FOREIGN KEY (`bidang_ilmu_id`) REFERENCES `bidang_ilmu` (`id`);
 
 --
--- Constraints for table `tim_penelitian`
+-- Ketidakleluasaan untuk tabel `tim_penelitian`
 --
 ALTER TABLE `tim_penelitian`
   ADD CONSTRAINT `tim_penelitian_ibfk_1` FOREIGN KEY (`dosen_id`) REFERENCES `dosen` (`id`) ON DELETE CASCADE,
