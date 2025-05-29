@@ -11,10 +11,13 @@
                 <x-app-logo />
             </a>
 
-           <flux:navlist variant="outline">
+            <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                    <flux:navlist.item icon="building-office" :href="route('ruang.index')" :current="request()->routeIs('ruang')" wire:navigate>{{ __('Manajemen Ruang') }}</flux:navlist.item>
+                    <flux:navlist.item icon="building-office" :href="route('ruang.index')" :current="request()->routeIs('ruang.index')" wire:navigate>{{ __('Manajemen Ruang') }}</flux:navlist.item>
+                    <flux:navlist.item icon="users" :href="route('pegawai.index')" :current="request()->routeIs('pegawai.index')" wire:navigate>{{ __('Pegawai') }}</flux:navlist.item>
+                    <flux:navlist.item icon="building-library" :href="route('unitkerja.index')" :current="request()->routeIs('unitkerja.index')" wire:navigate>{{ __('Unit Kerja') }}</flux:navlist.item>
+                    <flux:navlist.item icon="clipboard-document-list" :href="route('peminjaman.index')" :current="request()->routeIs('peminjaman.index')" wire:navigate>{{ __('Peminjaman') }}</flux:navlist.item>
                     </flux:navlist.group>
             </flux:navlist>
 

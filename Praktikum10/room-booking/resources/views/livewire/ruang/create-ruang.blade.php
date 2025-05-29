@@ -1,3 +1,4 @@
+
 <div class="container mx-auto">
     <h1 class="text-2xl font-bold mb-4">Create Ruang</h1>
     <form wire:submit.prevent="save" class="space-y-4">
@@ -8,8 +9,7 @@
         <flux:select id="status" wire:model.defer="status" label="Status Ruang" placeholder="Pilih Status Ruang"
             required>
             <flux:select.option value="Tersedia">Tersedia</flux:select.option>
-            <flux:select.option value="Tidak Tersedia">Tidak
-                Tersedia</flux:select.option>
+            <flux:select.option value="Tidak Tersedia">Tidak Tersedia</flux:select.option>
             <flux:select.option value="Dibooking">Dibooking</flux:select.option>
             <flux:select.option value="Maintenance">Maintenance</flux:select.option>
         </flux:select>

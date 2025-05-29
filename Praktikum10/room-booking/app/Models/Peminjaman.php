@@ -15,7 +15,7 @@ class Peminjaman extends Model
         'tanggal',
         'jam_mulai',
         'jam_akhir',
-        'keperluan',
+        'keterangan',
     ];
 
     public function pegawai(): BelongsTo
